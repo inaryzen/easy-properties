@@ -20,6 +20,16 @@ final class Metadata {
         CONVERTERS.put(double.class, Double::parseDouble);
         CONVERTERS.put(Boolean.class, Boolean::parseBoolean);
         CONVERTERS.put(boolean.class, Boolean::parseBoolean);
+        CONVERTERS.put(long.class, Long::parseLong);
+        CONVERTERS.put(Long.class, Long::parseLong);
+        CONVERTERS.put(float.class, Float::parseFloat);
+        CONVERTERS.put(Float.class, Float::parseFloat);
+        CONVERTERS.put(short.class, Short::parseShort);
+        CONVERTERS.put(Short.class, Short::parseShort);
+        CONVERTERS.put(char.class, s -> s.charAt(0));
+        CONVERTERS.put(Character.class, s -> s.charAt(0));
+        CONVERTERS.put(byte.class, Byte::parseByte);
+        CONVERTERS.put(Byte.class, Byte::parseByte);
     }
 
     private final String propertyFile;
